@@ -14,8 +14,8 @@
 // 'reactive' is not needed, 'ref' will do and is much simpler.
 import { ref } from 'vue'
 
-export function useCounter(initial_value = 0) {
-    const count = ref(initial_value)
+export function useCounter(initialValue = ref(0)) {
+    const count = ref(initialValue.value)
 
     const increment = () => count.value++
 
